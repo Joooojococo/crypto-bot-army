@@ -1,0 +1,31 @@
+# 🪖 Crypto Bot Army — 一鍵啟動全部 Bot
+version: "3.8"
+
+services:
+  # 📡 Whale Alert Bot
+  whale-alert:
+    build: ./bots/whale-alert
+    container_name: whale-alert
+    restart: unless-stopped
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # 🧠 AI Coin Scanner  
+  ai-coin-scanner:
+    build: ./bots/ai-coin-scanner
+    container_name: ai-coin-scanner
+    restart: unless-stopped
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # 🚧 More bots coming...
