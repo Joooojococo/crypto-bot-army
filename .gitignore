@@ -1,0 +1,18 @@
+# ── 環境變數（包含 API keys） ──
+.env
+
+# ── Python 緩存 ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ── IDE ──
+.vscode/
+.idea/
+.DS_Store
+
+# ── Docker ──
+.dockerignore
+
+# ── 日誌 ──
+*.log
